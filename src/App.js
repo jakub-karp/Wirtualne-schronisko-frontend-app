@@ -1,27 +1,26 @@
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './Header';
+import Header from './components/Header';
+import Adoptuj from './pages/Adoptuj';
+import About from './pages/About';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Rejestracja from './pages/Rejestracja';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <header className="App-header">
-        
-        <p>
-         
-        </p>
-        <h1>TESTOWE</h1>
-        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header/>
+        <Router>
+            <Routes>
+              <Route path='/' element={<Home />}/>
+              <Route path='/about' element={<About />}/>
+              <Route path='/adoptuj' element={<Adoptuj />}/>
+              <Route path='/login' element={<Login />}/>
+              <Route path='/rejestracja' element={<Rejestracja />}/>
+            </Routes>
+        </Router>
     </div>
   );
 }

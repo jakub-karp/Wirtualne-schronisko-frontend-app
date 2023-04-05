@@ -1,25 +1,22 @@
 import React from 'react'
-import logo from './assets/logo.png';
+import logo from '../assets/logo.png';
 import './Header.css';
 import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { FiLogIn } from "@react-icons/all-files/fi/FiLogIn";
 
 const Header = () => {
   return (
     <Navbar bg='light' expand="lg">
-        <Container fluid>
+        <Container fluid >
             <Navbar.Brand href='#'>
                 <img src={logo} alt="logo" className="d-inline-block align-top logo"/>
                 {' '}Wirtualne schronisko
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll" className="justify-content-end">
-                <Nav
-                    className="ml-auto my-lg-0"
-                    style={{ maxHeight: '100px' }}
-                    navbarScroll
-                >
-                    <Nav.Link href="#action1">Home</Nav.Link>
-                    <Nav.Link href="#action2">O nas</Nav.Link>
+                <Nav className="ml-auto my-lg-0 header" navbarScroll>
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/about">O nas</Nav.Link>
                     <NavDropdown title="Schroniska" id="navbarScrollingDropdown">
                         <NavDropdown.Item href="#action3">Schronisko w Toruniu</NavDropdown.Item>
                         <NavDropdown.Item href="#action4">
@@ -31,7 +28,12 @@ const Header = () => {
                     </NavDropdown>
                 </Nav>
                 
-                <Button variant="outline-warning" className='btnadoptuj btn-lg mr-2'>Adoptuj!</Button>
+                <Button variant="outline-warning" className='btnadoptuj mr-2' href='/adoptuj'>Adoptuj!</Button>
+                <Button variant='outline-warning' className='btnlogin' href='/login'>
+                        Logowanie
+                        <FiLogIn className='login-icon' size='20' />
+                </Button>
+                
             </Navbar.Collapse>
         </Container>
     </Navbar>
