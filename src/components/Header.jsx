@@ -6,11 +6,11 @@ import { FiLogIn } from "@react-icons/all-files/fi/FiLogIn";
 
 const Header = () => {
   return (
-    <Navbar bg='light' expand="lg">
+    <Navbar  bg='light' expand="lg" sticky='top'>
         <Container fluid >
             <Navbar.Brand href='#'>
                 <img src={logo} alt="logo" className="d-inline-block align-top logo"/>
-                {' '}Wirtualne schronisko
+                {' '}<div className='nameofproject'>Wirtualne schronisko</div> 
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll" className="justify-content-end">

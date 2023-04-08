@@ -1,0 +1,133 @@
+.bodyadopt {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.cards {
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-right: auto;
+}
+
+
+.card {
+    width: 20%;
+    float: left;
+    margin: 2%;
+    box-shadow: 0 0 10px 1px lightgray;
+}
+
+
+
+.card-img {
+    margin: 5%;
+    width: 90%;
+    height: 250px;
+    /*TODO: Wszystkie zdjęcia będą musiały mieć jedną określoną wysokość*/
+}
+
+.card-title {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.card-age {
+    text-align: center;
+}
+
+.btnadpt {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 50%;
+    border-radius: 20px;
+    outline-color: orange;
+}
+
+.search {
+    margin-right: 2%;
+    margin-left: 2%;
+    max-width: 40%;
+
+}
+
+.label-breed {
+    width: auto;
+    margin-top: 5px;
+    margin-right: 1%;
+}
+
+.breed {
+    max-width: 30%;
+    margin-right: 2%;
+}
+
+.searchbar {
+    display: flex;
+}
+
+.chevron {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+
+  .search-form {
+    position: relative;
+  }
+  
+  .search-text {
+    position: absolute;
+    top: 90px;
+    right: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+
+
+
+@media only screen and (max-width: 1000px) {
+    .searchbar {
+        display: block;
+        margin-top: 65px;
+
+    }
+    .cards{
+        margin-top: 25px;
+        margin-left: auto;
+    }
+
+    .card {
+        width: 80%;
+        margin: 10%;
+    }
+
+    .search {
+        max-width: 80%;
+        margin: auto;
+
+    }
+
+    .label-breed {
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 5%;
+    }
+
+    .breed {
+        max-width: 80%;
+        margin: auto;
+
+    }
+
+    .btnsearch {
+        margin-top: 20px;
+        float: right;
+    }
+}
